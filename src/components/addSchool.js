@@ -55,7 +55,7 @@ export default class AddSchool extends Component {
 
      componentDidMount() {
          console.log("Mounted")
-          axios.get('http://localhost:3001/jsp/api/v1/add-school')
+          axios.get('http://localhost:3000/add-school')
         .then(response => {
            
             this.setState({
@@ -131,7 +131,7 @@ export default class AddSchool extends Component {
 
         console.log(feedback);
 
-        axios.post('http://localhost:3001/jsp/v1/feedback', feedback)
+        axios.post('http://localhost:3000/feedback', feedback)
             .then(() => {
 				this.setState({
 				error: 'Message sent',
